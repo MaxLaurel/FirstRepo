@@ -18,7 +18,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("изменения для новой ветки")
+        print("llllllllllllllllllllllllll")
         configureNavigationBar()
         configureTableView()
     }
