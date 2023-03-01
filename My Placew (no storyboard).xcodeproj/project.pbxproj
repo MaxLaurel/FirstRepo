@@ -16,6 +16,7 @@
 		B54684AC292257CC000C5932 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54684AB292257CC000C5932 /* Place.swift */; };
 		B54684AE29225CFA000C5932 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54684AD29225CFA000C5932 /* CustomTableViewCell.swift */; };
 		B5636AD9292BE26900918749 /* AddPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5636AD8292BE26900918749 /* AddPlaceViewController.swift */; };
+		B5FC932B29AF6B8100D5D4A3 /* .gitignore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FC932A29AF6B8100D5D4A3 /* .gitignore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		B54684AB292257CC000C5932 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		B54684AD29225CFA000C5932 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		B5636AD8292BE26900918749 /* AddPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaceViewController.swift; sourceTree = "<group>"; };
+		B5FC932A29AF6B8100D5D4A3 /* .gitignore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = .gitignore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 		B546848B291D373E000C5932 = {
 			isa = PBXGroup;
 			children = (
+				B5FC932A29AF6B8100D5D4A3 /* .gitignore.swift */,
 				B5468496291D373E000C5932 /* My Placew (no storyboard) */,
 				B5468495291D373E000C5932 /* Products */,
 				FCAD93B58E676A9BED8842E6 /* Pods */,
@@ -110,7 +113,6 @@
 				734CBE08223F099EB765666E /* Pods-My Placew (no storyboard).debug.xcconfig */,
 				2F454D77EA83DA1F9DA82B1B /* Pods-My Placew (no storyboard).release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -232,6 +234,7 @@
 				B546849C291D373E000C5932 /* HomeViewController.swift in Sources */,
 				B54684AE29225CFA000C5932 /* CustomTableViewCell.swift in Sources */,
 				B5468498291D373E000C5932 /* AppDelegate.swift in Sources */,
+				B5FC932B29AF6B8100D5D4A3 /* .gitignore.swift in Sources */,
 				B546849A291D373E000C5932 /* SceneDelegate.swift in Sources */,
 				B54684AC292257CC000C5932 /* Place.swift in Sources */,
 			);

@@ -18,7 +18,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("new for commit")
+        print("изменения для новой ветки")
         configureNavigationBar()
         configureTableView()
     }
