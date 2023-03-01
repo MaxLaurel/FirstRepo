@@ -1,0 +1,6 @@
+framework module Pods_My_Placew__no_storyboard_ {
+  umbrella header "Pods-My Placew (no storyboard)-umbrella.h"
+
+  export *
+  module * { export * }
+}
