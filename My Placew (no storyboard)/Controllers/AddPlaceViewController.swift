@@ -28,10 +28,9 @@ class AddPlaceViewController: UIViewController {
                                                             style: .plain,
                                                             target: self,
                                                             action: #selector(fetchTheDataToPreviousVC))
-        //navigationItem.rightBarButtonItem!.isEnabled = false
         createAddPlaceTableView()
-        hideButtonSave()
-        //nameTextField.addTarget(self, action: #selector(hideButtonSave), for: .editingChanged)
+        //hideButtonSave()
+        nameTextField.addTarget(self, action: #selector(hideButtonSave), for: .editingChanged)
         //tapGestureConfiguration()
         // configureStackView()
     }
@@ -55,13 +54,17 @@ class AddPlaceViewController: UIViewController {
     }
     @objc func fetchTheDataToPreviousVC() {
         
-        guard let delegate = delegate, let UnwruppedView = myView.image else { return }
-        delegate.fetchTheData(mynameTextfield: nameTextField.text!,
-                              mytypeTextfield: typeTextField.text!,
-                              mylocationTextfield: locationTextField.text!,
-                              myNewPlaceImage: nil,
-                              image: UnwruppedView)
+        guard let delegate = delegate else { return }
+        guard nameTextField.text != "", typeTextField.text != "", locationTextField.text != "", myView.image != nil else {return callAlertWithNotification()}
+        delegate.fetchTheData(mynameTextfield: nameTextField.text!, mytypeTextfield: typeTextField.text!, mylocationTextfield: locationTextField.text!, myNewPlaceImage: nil, image: myView.image! )
         navigationController?.popViewController(animated: true)
+    }
+    
+    func callAlertWithNotification() {
+        let alert = UIAlertController(title: "Not enough data to continue!", message: "Please, fill all the fields and attach photo", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Get it!", style: .cancel)
+        alert.addAction(action)
+        self.present(alert, animated: true, completion: nil)
     }
     
     //    func tapGestureConfiguration() {
@@ -90,13 +93,13 @@ class AddPlaceViewController: UIViewController {
         stackView.topAnchor.constraint(equalTo: cellForStackView.topAnchor, constant: 15).isActive = true
     }
     
-    func hideButtonSave() {
-        navigationItem.rightBarButtonItem!.isEnabled = !nameTextField.text!.isEmpty && !locationTextField.text!.isEmpty && !typeTextField.text!.isEmpty
-//        if nameTextField.text!.isEmpty || locationTextField.text!.isEmpty || typeTextField.text?.isEmpty == false {
-//        navigationItem.rightBarButtonItem!.isEnabled = true
-//        } else {
-//            navigationItem.rightBarButtonItem!.isEnabled = false
-//        }
+    @objc func hideButtonSave() {
+//        navigationItem.rightBarButtonItem!.isEnabled = !nameTextField.text!.isEmpty && !locationTextField.text!.isEmpty && !typeTextField.text!.isEmpty
+        if nameTextField.text!.isEmpty == false {
+            navigationItem.rightBarButtonItem!.isEnabled = true
+        } else {
+            navigationItem.rightBarButtonItem!.isEnabled = false
+        }
     }
 } //END OF CLASS
 

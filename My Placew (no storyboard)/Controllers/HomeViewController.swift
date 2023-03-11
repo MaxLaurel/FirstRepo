@@ -8,17 +8,34 @@
 import UIKit
 
 protocol firstViewControllerDelegate: AnyObject {
-    func fetchTheData(mynameTextfield: String, mytypeTextfield: String, mylocationTextfield: String, myNewPlaceImage: String?, image: UIImage)
+func fetchTheData(mynameTextfield: String,
+                      mytypeTextfield: String,
+                      mylocationTextfield: String,
+                      myNewPlaceImage: String?,
+                      image: UIImage)
 }
     
 class HomeViewController: UIViewController {
     
     let TableViewForPlaces = UITableView()
-    var places = [Place(name: "Burger place", location: "Orlando", type: "Cafe", restaurantImage: "бургер", image: nil), Place(name: "MegaMeat", location: "Miami", type: "Grocery", restaurantImage: "бургер2", image: nil), Place(name: "Shaurma-City", location: "Moskow", type: "Cafe", restaurantImage: "шаурма", image: nil)]
+    var places = [Place(name: "Burger place",
+                        location: "Orlando",
+                        type: "Cafe",
+                        restaurantImage: "бургер",
+                        image: nil),
+                  Place(name: "MegaMeat",
+                        location: "Miami",
+                        type: "Grocery",
+                        restaurantImage: "бургер2",
+                        image: nil),
+                  Place(name: "Shaurma-City",
+                        location: "Moskow",
+                        type: "Cafe",
+                        restaurantImage: "шаурма",
+                        image: nil)]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("llllllllllllllllllllllllll")
         configureNavigationBar()
         configureTableView()
     }
