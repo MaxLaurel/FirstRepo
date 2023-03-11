@@ -66,7 +66,7 @@ class AddPlaceViewController: UIViewController {
         alert.addAction(action)
         self.present(alert, animated: true, completion: nil)
     }
-    
+    print("for new mwrge")
     //    func tapGestureConfiguration() {
     //        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(thatWasTap))
     //        view.addGestureRecognizer(tapGesture)
